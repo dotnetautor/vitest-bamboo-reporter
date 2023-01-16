@@ -1,13 +1,12 @@
 {
   "name": "vitest-bamboo-reporter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Bamboo reporter for vitest",
   "author": "Matthias Fischer <opensource@dotnetautor.de> (https://dotnetautor.de)",
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
+  "homepage": "https://github.com/dotnetautor/vitest-bamboo-reporter",
+  "bugs": "https://github.com/dotnetautor/vitest-bamboo-reporter/issues",
+  "repository": "https://github.com/dotnetautor/vitest-bamboo-reporter",
   "keywords": [
     "vitest",
     "vitest-reporter",
@@ -19,8 +18,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "publish": "clean-publish --package-manager pnpm --fields pnpm -- --no-git-checks",
-    "publish:dev": "clean-publish --without-publish --package-manager pnpm --fields pnpm -- --no-git-checks"
+    "clean-publish": "clean-publish --package-manager pnpm --fields pnpm -- --no-git-checks",
+    "clean-publish:dev": "clean-publish --without-publish --package-manager pnpm --fields pnpm -- --no-git-checks"
   },
   "main": "dist/bamboo-reporter.umd.cjs",
   "module": "dist/bamboo-reporter.js",
