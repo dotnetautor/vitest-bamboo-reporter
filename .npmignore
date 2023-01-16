@@ -1,0 +1,6 @@
+.editorconfig
+.eslintignore
+.eslintrc.json
+src/bamboo-reporter.ts
+tsconfig.json
+vite.config.ts

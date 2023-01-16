@@ -1,0 +1,55 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "import",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "airbnb-typescript/base"
+  ],
+  "parserOptions": {
+    "project": [
+      "./tsconfig.json"
+    ],
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {}
+    }
+  },
+  "rules": {
+    "no-console": "off",
+    "no-debugger": "off",
+    "max-len": [2, 260, 2, {"ignoreUrls": true}],
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "lines-between-class-members": "off",
+    "no-nested-ternary": "off",
+    "object-curly-newline": "off", //["error", { "multiline": true, "minProperties": 8, "consistent": true }],
+    "quotes": ["error", "single"],
+    "no-unused-vars": "off",
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "no-param-reassign": ["error", { "props": false }],
+    "@typescript-eslint/quotes": ["error", "single", { "avoidEscape": true }],
+    "@typescript-eslint/lines-between-class-members": ["error", "always", { "exceptAfterOverload": true }],
+    "@typescript-eslint/no-unused-vars": [ "error", { "argsIgnorePattern": "^_",  "varsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" } ],
+    "@typescript-eslint/naming-convention": ["error", {"format": ["camelCase", "PascalCase", "UPPER_CASE"], "leadingUnderscore": "allow", "selector": "default"}],
+    "@typescript-eslint/explicit-member-accessibility": "off"
+  },
+  "overrides": [
+    {
+      "files": ["vite.config.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": ["error", {
+          "devDependencies": true
+        }]
+      }
+    }
+  ]
+}
