@@ -10,7 +10,9 @@ export default defineConfig({
       fileName: 'bamboo-reporter',
     },
     rollupOptions: {
-      external: builtinModules,
+      external: [
+        ...builtinModules,
+      ],
     },
   },
 });
