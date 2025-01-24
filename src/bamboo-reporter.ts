@@ -64,7 +64,7 @@ export default class BambooReporter implements Reporter {
       const result: TestCaseResult = {
         title,
         fullTitle,
-        duration: test.result?.duration || 0,
+        duration: Math.round(test.result?.duration || 0),
         errorCount: 0,
       };
 
@@ -88,7 +88,7 @@ export default class BambooReporter implements Reporter {
     report.stats.failures = report.failures.length;
     report.stats.passes = report.passes.length;
     report.stats.skipped = report.skipped.length;
-    report.stats.duration = allTests.reduce((acc, test) => acc + (test.result?.duration || 0), 0);
+    report.stats.duration = Math.round(allTests.reduce((acc, test) => acc + (test.result?.duration || 0), 0));
 
     const start = allTests.reduce<number>((acc, test) => {
       const startTime = test.result?.startTime || Number.MAX_SAFE_INTEGER;
